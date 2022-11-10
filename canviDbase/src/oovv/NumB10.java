@@ -26,7 +26,7 @@ public NumB10(int num) {
  }
  @Override
  public String toString() {
- return num; // (error 1)
+ return "num"+ num; // (error 1)
 }
  /**
 * canvia el número de base. accepta des de base 2 fins a 24.
@@ -39,10 +39,10 @@ public NumB10(int num) {
  if(base<2||base>24){
  throw new ArithmeticException("la base va de 2 a 24");
  }
- String digits = "0123456789ABCDEFGHIJKLMN; // (error 2)
+ String digits = "0123456789ABCDEFGHIJKLMN"; // (error 2)
  String cad = "";
- while (num > “O”) { // (error 3)
- cad = cad + digits.charAt(num % base);
+ while (num > 0) { // (error 3)
+ cad = cad +  digits.charAt(num % base);
  num = num / base;
  }
  return alReves(cad); // crida al mètode alReves
@@ -54,17 +54,18 @@ public NumB10(int num) {
 * @return la cadena invertida
 */
 
+@SuppressWarnings("empty-statement")
  private String alReves(String cad) {
- String reves = ; // (error 4)
+ String reves = ""; // (error 4)
  int i = cad.length() - 1;
  while (i >= 0) {
  reves = reves + cad.charAt(i);
  i--;
  }; // (error 5)
- return reve; // (error 6)
+ return reves; // (error 6)
 }
  public String canviaARoma() throws ArithmeticException {
- if (num < 1 || num > “9999”) { // (error 7)
+ if (num < 1 || num > 9999) { // (error 7)
  throw new ArithmeticException("sols per a números entre 1 i 9999");
  }
  
@@ -107,7 +108,7 @@ public NumB10(int num) {
  case 2:
  digitR = digitR + caracters[iBloc][0];
  case 1:
- digitR == digitR + caracters[iBloc][0]; // (error 8)
+ digitR = digitR + caracters[iBloc][0]; // (error 8)
  break;
  }
  numR = numR + digitR; // afegeix el dígit al número romà
@@ -117,7 +118,7 @@ public NumB10(int num) {
  }
  return numR;
 }
-
+private int num;;
  
     
 }
